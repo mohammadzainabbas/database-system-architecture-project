@@ -1,8 +1,16 @@
-### Install GDB
+## Install GDB
 
 This guide will walk you through the installation of _GNU Debugger_ (GDB)
 
-#### 2.2.1. Install GDB on Linux (Ubuntu)
+### Table of contents
+
+- [Install GDB on Linux (Ubuntu)](#install-gdb-linux-ubuntu)
+- [Install GDB on Mac (Intel based)](#install-gdb-mac-intel)
+- [Install GDB on Mac (Apple Silicon `M1 chip`)](#install-gdb-mac-m1-chip)
+
+<a id="install-gdb-linux-ubuntu" />
+
+#### 1. Install GDB on Linux (Ubuntu)
 
 Simply run:
 
@@ -10,7 +18,9 @@ Simply run:
 sudo apt-get install gdb -y
 ```
 
-#### 2.2.2. Install GDB on Mac (Intel based)
+<a id="install-gdb-mac-intel" />
+
+#### 2. Install GDB on Mac (Intel based)
 
 Simply run:
 
@@ -18,7 +28,9 @@ Simply run:
 brew install gdb
 ```
 
-#### 2.2.3. Install GDB on Mac (Apple Silicon `M1 chip`)
+<a id="install-gdb-mac-m1-chip" />
+
+#### 3. Install GDB on Mac (Apple Silicon `M1 chip`)
 
 `GDB` is not currently ported for M1 chips (at the time of the writing). In short, you can't use `brew install gdb` to install it.
 
