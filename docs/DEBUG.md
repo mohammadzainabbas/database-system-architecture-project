@@ -7,7 +7,7 @@
 - [Debugging](#debugging)
   * [Printf](#printf-debug)
   * [GDB](#gdb-debug)
-  * [VS Code](#vscode-debug)
+  <!-- * [VS Code](#vscode-debug) -->
 ---
 
 <a id="overview" />
@@ -86,10 +86,21 @@ gdb --version
 
 If `gdb` is not installed, please install it first. You can refer to the [installation guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/mohammad/docs/INSTALL_GDB.md) for more details.
 
-To work with `gdb` you need to compile your PostgreSQL source code with debugging flags/options.
+To work with `gdb` you need to compile your PostgreSQL source code with debugging flags/options. You can follow [this guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/mohammad/docs/DEBUG_MODE.md) for more details.
 
+Once you have your postgres backend pid, open another terminal and simply run:
 
+```bash
+gdb -p <postgres-backend-pid>
+```
 
+or
+
+```bash
+gdb
+attach <postgres-backend-pid>
+```
+
+> Note: If you see some errors, it would be because in some OS, due to security reasons you might need to give `gdb` special permissions to attach to another process. This will differ from OS to OS. So, I will leave this to you to search it out for your particular OS.
 
 Please, refer to the [official doc](https://wiki.postgresql.org/wiki/Developer_FAQ#gdb) for more information.
-
