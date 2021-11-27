@@ -1,6 +1,6 @@
 ### Install GDB
 
-This guide will wake you through the installation of _GNU Debugger_ (GDB)
+This guide will walk you through the installation of _GNU Debugger_ (GDB)
 
 #### 2.2.1. Install GDB on Linux (Ubuntu)
 
