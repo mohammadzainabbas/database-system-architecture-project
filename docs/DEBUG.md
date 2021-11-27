@@ -84,13 +84,12 @@ To get started, make sure that `gdb` is installed on your machine.
 gdb --version
 ```
 
-If `gdb` is not installed, please install it first. You can refer to the [installation guide]() for more details.
+If `gdb` is not installed, please install it first. You can refer to the [installation guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/mohammad/docs/INSTALL_GDB.md) for more details.
+
+To work with `gdb` you need to compile your PostgreSQL source code with debugging flags/options.
+
 
 
 
 Please, refer to the [official doc](https://wiki.postgresql.org/wiki/Developer_FAQ#gdb) for more information.
 
-
-```bash
-./configure --enable-cassert --enable-debug CFLAGS="-ggdb -Og -g3 -fno-omit-frame-pointer"
-```
