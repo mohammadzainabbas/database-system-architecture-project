@@ -25,6 +25,8 @@
 
 Range types are data types representing a range of values of some element type (called the `range's subtype`). For example, _ranges of timestamp_ might be used to represent the ranges of _time_ that a meeting room is reserved. In this case the data type is `tsrange` (short for “_timestamp range_”), and timestamp is the subtype. The subtype must have a total order so that it is well-defined whether element values are within, before, or after a range of values.
 
+---
+
 <a id="project-overview" />
 
 #### 2. Project Overview
@@ -68,17 +70,23 @@ And we store all these into the `pg_statistics` for later usage.
 
 The first goal of our project is to determine which statistics should we calculate during the analysis phase. Do we need something extra for doing proper/better estimations for selectivity and joins for range type. 
 
+---
+
 <a id="selectivity-estimations" />
 
 ##### 2.2. Selectivity Estimations
 
 The second goal of our project is to implement selectivity estimation functions for the _overlaps_ `&&` and the _strictly left_ of `<<` predicates/operators.
 
+---
+
 <a id="join-estimations" />
 
 ##### 2.3. Join Estimations
 
 The final and main goal of our project is to implement join cardinality estimation for the overlaps `&&` predicate/operator for the range type.
+
+---
 
 <a id="debug" />
 
