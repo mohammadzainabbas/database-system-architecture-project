@@ -84,9 +84,9 @@ To get started, make sure that `gdb` is installed on your machine.
 gdb --version
 ```
 
-If `gdb` is not installed, please install it first. You can refer to the [installation guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/mohammad/docs/INSTALL_GDB.md) for more details.
+If `gdb` is not installed, please install it first. You can refer to the [installation guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/main/docs/INSTALL_GDB.md) for more details.
 
-To work with `gdb` you need to run your PostgreSQL in Debug mode. You can follow [this guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/mohammad/docs/DEBUG_MODE.md) for details about _debug mode_ and how to get _postgres backend pid_.
+To work with `gdb` you need to run your PostgreSQL in Debug mode. You can follow [this guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/main/docs/DEBUG_MODE.md) for details about _debug mode_ and how to get _postgres backend pid_.
 
 Once you have your _postgres backend pid_, open another terminal and simply run:
 
