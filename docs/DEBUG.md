@@ -36,9 +36,9 @@ git clone https://github.com/postgres/postgres.git
 
 A very basic way to debug any source code is to print out the variables and see what's going on. In `C/C++` you can use [`printf`](https://www.cplusplus.com/reference/cstdio/printf/) function to print with some formatting.
 
-`printf` will write the formatted string to standard output stream `stdout`. In postgres, by default the standard output stream is redirected to the logfile.
+`printf` will write the formatted string to standard output stream `stdout`. In postgres, by default the standard output stream is redirected to the _logfile_.
 
-You can specify the location of logfile when you run `pg_ctl -D <path-to-your-database-cluster> -l <path-to-log-file> start`
+You can specify the location of _logfile_ when you run `pg_ctl -D <path-to-your-database-cluster> -l <path-to-log-file> start`
 
 For example
 ```bash
@@ -66,7 +66,7 @@ log_file_mode = 0600
 
 Now, when you do `printf` it will be redirected to `/usr/local/pgsql/data/log/` directory.
 
-Also, you need to use `fflush` everytime you will use `printf` because usually standard output stream is fully buffered and `fflush` will push everything in the buffer to the stdout print. (if you don't understand what this means, read about buffer and stdout)
+Also, you need to use `fflush` everytime you will use `printf` because usually standard output stream is fully buffered and `fflush` will push everything in the buffer to the stdout print. (if you don't understand what this means, read about _buffer and stdout_)
 
 Alternatively, you can use `elog` or `fprintf` to print. 
 
@@ -76,7 +76,7 @@ Please, refer to the [official doc](https://wiki.postgresql.org/wiki/Developer_F
 
 #### 2.2. GDB
 
-GNU Debugger (GDB) is a very powerful tool to debugging. It is a portable debugger that runs on many Unix-like systems and works for many programming languages, including `Ada`, `C`, `C++`, `Objective-C`, `Free Pascal`, `Fortran`, `Go`, and partially others.
+GNU Debugger (GDB) is a very powerful tool for debugging. It is a portable debugger that runs on many Unix-like systems and works for many programming languages, including `Ada`, `C`, `C++`, `Objective-C`, `Free Pascal`, `Fortran`, `Go`, and partially others.
 
 To get started, make sure that `gdb` is installed on your machine.
 
@@ -86,9 +86,9 @@ gdb --version
 
 If `gdb` is not installed, please install it first. You can refer to the [installation guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/mohammad/docs/INSTALL_GDB.md) for more details.
 
-To work with `gdb` you need to compile your PostgreSQL source code with debugging flags/options. You can follow [this guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/mohammad/docs/DEBUG_MODE.md) for more details.
+To work with `gdb` you need to run your PostgreSQL in Debug mode. You can follow [this guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/mohammad/docs/DEBUG_MODE.md) for details about _debug mode_ and how to get _postgres backend pid_.
 
-Once you have your postgres backend pid, open another terminal and simply run:
+Once you have your _postgres backend pid_, open another terminal and simply run:
 
 ```bash
 gdb -p <postgres-backend-pid>
