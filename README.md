@@ -10,12 +10,12 @@
 
 ### Table of contents
 
-- [Introduction](#introduction)
+<!-- - [Introduction](#introduction) -->
 - [Debug](#debug)
 
 ---
 
-<a id="introduction" />
+<!-- <a id="introduction" />
 
 #### 1. Introduction
 
@@ -24,5 +24,11 @@ Range types in PostgreSQL are data types for representing a continuous interval 
 In this project, we are aiming to develop  Range Types: Statistics, Selectivity and Join Estimations
 
 PostgreSQL (a.k.a _Postgres_) is a free and open-source relational database management system emphasizing extensibility and SQL compliance. It was originally named _POSTGRES_, referring to its origins as a successor to the _Ingres_ database developed at the _University of California, Berkeley_.
+ -->
 
 
+<a id="debug" />
+
+#### 1. Debug
+
+Please refer to [debug guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/main/docs/DEBUG.md) for more details.
