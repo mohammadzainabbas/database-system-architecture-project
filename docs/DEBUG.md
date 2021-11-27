@@ -47,7 +47,7 @@ pg_ctl -D /usr/local/pgsql/data -l ~/Desktop/logfile start
 
 will redirect the logs to `~/Desktop/logfile` file.
 
-But in some cases, you won't see any output there. Because standard output was been disabled by your configuration. 
+But in some cases, you won't see any output there. Because standard output was disabled by your configuration. 
 
 To enable logging, you need to change your `postgresql.conf` file.
 
@@ -71,6 +71,24 @@ Also, you need to use `fflush` everytime you will use `printf` because usually s
 Alternatively, you can use `elog` or `fprintf` to print. 
 
 Please, refer to the [official doc](https://wiki.postgresql.org/wiki/Developer_FAQ#Run-time) for more information.
+
+<a id="gdb-debug" />
+
+#### 2.2. GDB
+
+GNU Debugger (GDB) is a very powerful tool to debugging. It is a portable debugger that runs on many Unix-like systems and works for many programming languages, including `Ada`, `C`, `C++`, `Objective-C`, `Free Pascal`, `Fortran`, `Go`, and partially others.
+
+To get started, make sure that `gdb` is installed on your machine.
+
+```bash
+gdb --version
+```
+
+If `gdb` is not installed, please install it first. You can refer to the [installation guide]() for more details.
+
+
+
+Please, refer to the [official doc](https://wiki.postgresql.org/wiki/Developer_FAQ#gdb) for more information.
 
 
 ```bash
