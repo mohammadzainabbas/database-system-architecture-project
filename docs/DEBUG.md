@@ -7,7 +7,7 @@
 - [Debugging](#debugging)
   * [Printf](#printf-debug)
   * [GDB](#gdb-debug)
-  <!-- * [VS Code](#vscode-debug) -->
+  * [VS Code](#vscode-debug)
 ---
 
 <a id="overview" />
@@ -104,3 +104,17 @@ attach <postgres-backend-pid>
 > Note: If you see some errors, it would be because in some OS, due to security reasons you might need to give `gdb` special permissions to attach to another process. This will differ from OS to OS. So, I will leave this to you to search it out for your particular OS.
 
 Please, refer to the [official doc](https://wiki.postgresql.org/wiki/Developer_FAQ#gdb) for more information.
+
+<a id="vscode-debug" />
+
+#### 2.3. VS Code
+
+[`Visual Studio Code`](https://code.visualstudio.com) is the default editor of choice for most of the developers today. To debug in VS Code, you need to follow [this guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/main/docs/DEBUG_MODE.md) first to build _PostgreSQL_ in _debug mode_ and get _postgres backend pid_.
+
+Now, open your `postgres` source code in your VS Code and simply run the following commands:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://github.com/mohammadzainabbas/database-system-architecture-project/blob/main/scripts/setup_debugger.sh)"
+```
+
+And now, to use the debugger, press `F5`. And enter the `postgres backend pid` here. And you will be in the debug mode.
