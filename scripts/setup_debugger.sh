@@ -33,7 +33,9 @@ check_dir() {
 }
 
 check_bin() {
-    if [ ! -x $1 ]; then
+    if which $1 >/dev/null; then
+        log "'$1' exists in the path"
+    else
         fatal_error "$2"
     fi
 }
@@ -65,7 +67,7 @@ check_bin code "'code' was not found. Kindly, add 'code' into your path first."
 
 log "Setting up debugger for VS Code"
 
-code --install-extension vadimcn.vscde-lldb
+code --install-extension vadimcn.vscode-lldb > /dev/null
 say '{"version": "0.2.0","configurations":[{"name": "Debug PostgreSQL","type": "lldb","request": "attach","program": "/usr/local/pgsql/bin/postgres","pid": "${command:pickMyProcess}","args": [],"stopAtEntry": false,"cwd": "${fileDirname}","environment": [],"externalConsole": false,"MIMode": "lldb","targetArchitecture": "x86_64"}]}' >> launch.json
 create_dir_if_not_exists .vscode
 mv launch.json .vscode
