@@ -111,7 +111,7 @@ Please, refer to the [official doc](https://wiki.postgresql.org/wiki/Developer_F
 
 [`Visual Studio Code`](https://code.visualstudio.com) is the default editor of choice for most of the developers today. To debug in VS Code, you need to follow [this guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/main/docs/DEBUG_MODE.md) first to build _PostgreSQL_ in _debug mode_ and get _postgres backend pid_.
 
-Now, open your `postgres` source code in your VS Code and simply run the following commands:
+Now, open your `postgres` source code in your VS Code and simply run the following command:
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mohammadzainabbas/database-system-architecture-project/main/scripts/setup_debugger.sh)"
