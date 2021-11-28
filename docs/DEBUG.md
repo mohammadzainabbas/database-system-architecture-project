@@ -114,7 +114,7 @@ Please, refer to the [official doc](https://wiki.postgresql.org/wiki/Developer_F
 Now, open your `postgres` source code in your VS Code and simply run the following commands:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://github.com/mohammadzainabbas/database-system-architecture-project/blob/main/scripts/setup_debugger.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mohammadzainabbas/database-system-architecture-project/main/scripts/setup_debugger.sh)"
 ```
 
 And now, to use the debugger, press `F5`. And enter the `postgres backend pid` here. And you will be in the debug mode.
