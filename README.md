@@ -15,7 +15,7 @@
   * [Statistics](#statistics)
   * [Selectivity Estimations](#selectivity-estimations)
   * [Join Estimations](#join-estimations)
-- [Debug](#debug)
+- [Debugging Guide](#debugging-guide)
 
 ---
 
@@ -88,8 +88,8 @@ The final and main goal of our project is to implement join cardinality estimati
 
 ---
 
-<a id="debug" />
+<a id="debugging-guide" />
 
-#### 1. Debug
+#### 3. Debugging Guide
 
-Please refer to [debug guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/main/docs/DEBUG.md) for more details.
+Please refer to [debugging guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/main/docs/DEBUG.md) for more details.
