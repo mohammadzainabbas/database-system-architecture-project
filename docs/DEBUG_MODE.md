@@ -27,6 +27,9 @@ sudo make install
 ```bash
 pg_ctl -D /usr/local/pgsql/data -l logfile start
 ```
+
+> Note: To automate steps from 2 to 4, you can use [this](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/main/docs/RECOMPILE_POSTGRES.md) as well
+
 #### 5. Connect to postgres backend
 
 ```bash
