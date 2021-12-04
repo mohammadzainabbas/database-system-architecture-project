@@ -8,7 +8,7 @@
   * [Printf](#printf-debug)
   * [GDB](#gdb-debug)
   * [VS Code](#vscode-debug)
-  * [Recompile Script](#recompile-script)
+  
 ---
 
 <a id="overview" />
@@ -119,36 +119,3 @@ Now, open your `postgres` source code in your VS Code and simply run the followi
 ```
 
 And now, to use the debugger, press `F5`. And enter the `postgres backend pid` here. And you will be in the debug mode.
-
-<a id="recompile-script" />
-
-#### 2.4 Script to recompile & restart server
-Typing all the commands to `make`, `sudo make install` & restarting the server can be tiring and slow down your productivity. A more efficient way is to simply write a scripts
-and run that like `./recompile_postgres.sh` and voila!
-
-Download the script with the following command.
-
-> Note: Please read the script and modify it before running !
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mohammadzainabbas/database-system-architecture-project/main/scripts/recompile_postgres.sh)"
-```
-
-Usage instructions:
-
-Make sure the permissions of `./recompile_postgres` are as follows:
-
-```bash
--rwxrwxr-x  1 teemo teemo    797 Dec  2 17:36 recompile_postgres.sh*
-```
-
-If not run the following command to fix the permissions.
-```bash
-sudo chmod 775 recompile_postgres.sh
-```
-
-To recompile postgres & restart the server, go to postgres source code directory & run:
-
-```bash
-./recompile_postgres
-```
