@@ -16,6 +16,7 @@
   * [Selectivity Estimations](#selectivity-estimations)
   * [Join Estimations](#join-estimations)
 - [Debugging Guide](#debugging-guide)
+- [Benchmark Guide](#benchmark-guide)
 
 ---
 
@@ -93,3 +94,31 @@ The final and main goal of our project is to implement join cardinality estimati
 #### 3. Debugging Guide
 
 Please refer to [debugging guide](https://github.com/mohammadzainabbas/database-system-architecture-project/blob/main/docs/DEBUG.md) for more details.
+
+---
+
+<a id="benchmark-guide" />
+
+#### 4. Benchmark Guide
+
+To run the benchmarks on different `range_type`, follow the below mentioned steps:
+
+1. Clone this repo
+
+```bash
+git clone https://github.com/mohammadzainabbas/database-system-architecture-project.git
+cd database-system-architecture-project
+```
+
+2. Run the benchmark script
+```bash
+sh scripts/run_benchmark.sh -d test
+```
+
+> Note: Replace `test` with the name of your database
+
+> Note: If you see an error `Binary 'psql' not found'`, run the following command and re-try:
+
+```bash
+echo 'export PATH="/usr/local/pgsql/bin:$PATH" >> ~/.bashrc && source ~/.bashrc
+```
