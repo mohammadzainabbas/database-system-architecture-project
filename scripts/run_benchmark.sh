@@ -16,7 +16,9 @@ source $(dirname $0)/utils.sh
 function usage()
 {
 cat << HEREDOC
-Generates random range_type data and run 'explain analyze' query to benchmark your join estimation(s).
+
+Generates random 'range_type' data and run 'explain analyze' query to benchmark your join estimation(s).
+
 Usage: 
     
     $progname [OPTION] [Value]
@@ -37,7 +39,7 @@ HEREDOC
 #Get program name
 progname=$(basename $0)
 
-path=benchmark
+path=benchmarking_queries
 database=dsa_project
 
 #Get all the arguments and update accordingly
