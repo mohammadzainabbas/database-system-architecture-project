@@ -120,5 +120,5 @@ sh scripts/run_benchmark.sh -d test
 > Note: If you see an error `Binary 'psql' not found'`, run the following command and re-try:
 
 ```bash
-echo 'export PATH="/usr/local/pgsql/bin:$PATH" >> ~/.bashrc && source ~/.bashrc
+echo 'export PATH="/usr/local/pgsql/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
 ```
