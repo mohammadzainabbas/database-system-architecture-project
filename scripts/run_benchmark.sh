@@ -67,7 +67,7 @@ run_psql() {
 }
 
 # files to run
-files=(create_tables daterange_benchmarking floatrange_benchmarking intrange_benchmarking tsrange_benchmarking)
+files=(create_tables daterange_benchmarking numrange_benchmarking intrange_benchmarking tsrange_benchmarking)
 
 # run 'psql' for all the files
 for i in "${files[@]}"; do run_psql $path/$i $database; done
