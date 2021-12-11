@@ -63,8 +63,9 @@ run_psql() {
     local file=$1
     local database=$2
     check_file $file.sql
-    log "Running $file.sql"
+    log "Running '$file.sql'"
     psql -d $database -f ${file}.sql >> ${file}.log
+    log "Sent query result(s) to '${file}.log'"
     separator
 }
 
