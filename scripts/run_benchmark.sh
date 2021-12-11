@@ -16,7 +16,9 @@ source $(dirname $0)/utils.sh
 function usage()
 {
 cat << HEREDOC
-Generates random range_type data and run 'explain analyze' query to benchmark your join estimation(s).
+
+Generates random 'range_type' data and run 'explain analyze' query to benchmark your join estimation(s).
+
 Usage: 
     
     $progname [OPTION] [Value]
@@ -37,7 +39,7 @@ HEREDOC
 #Get program name
 progname=$(basename $0)
 
-path=benchmark
+path=benchmarking_queries
 database=dsa_project
 
 #Get all the arguments and update accordingly
@@ -61,13 +63,14 @@ run_psql() {
     local file=$1
     local database=$2
     check_file $file.sql
-    log "Running $file.sql"
+    log "Running '$file.sql'"
     psql -d $database -f ${file}.sql >> ${file}.log
+    log "Sent query result(s) to '${file}.log'"
     separator
 }
 
 # files to run
-files=(create_tables daterange_benchmarking floatrange_benchmarking intrange_benchmarking tsrange_benchmarking)
+files=(create_tables daterange_benchmarking numrange_benchmarking intrange_benchmarking tsrange_benchmarking)
 
 # run 'psql' for all the files
 for i in "${files[@]}"; do run_psql $path/$i $database; done
